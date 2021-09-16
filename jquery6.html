@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-6</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <p> this will be replace with div</p>
+    <p> this will be replace with div</p>
+    <p> this will be replace with div</p>
+    <p> this will be replace with div</p>
+    <p> this will be replace with div</p>
+    <div>
+        this is replace with p tag after reload
+    </div>
+    <center>
+        <button id="button1">change all div tags with p tags </button>
+        <button id="button2">change all the p tags with div tags</button>
+    </center>
+    <script>
+        $(document).ready(function(){
+            $('#button1').click(function(){
+                $('div').replaceWith($("<p>" +$('div').text()+ "</p>"))
+            })
+            $('#button2').click(function(){
+                $('p').replaceWith($("<div>" +$('p').text()+ "</div>"))
+            })
+        })
+    </script>
+    
+</body>
+</html>

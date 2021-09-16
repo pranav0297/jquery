@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questiom-10</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #slide{
+            text-align: center;
+             color: red;
+             font-size: 20px;
+            
+        }
+        .panel{
+            display:none;
+            padding:20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slide">Hover to slide the panel down or up</div>
+    <div class="panel">BOOK</div>
+    <div class="panel">PENCIL</div>
+    <div class="panel">PEN</div>
+    <div class="panel">COPY</div>
+    <script>
+        $(document).ready(function(){
+            $('#slide').hover(function(){
+                $('.panel').slideToggle('slow')
+            })
+        })
+    </script>
+
+</body>
+
+
+</html>

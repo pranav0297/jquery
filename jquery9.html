@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-9</title>
+       <style>
+           #course{
+               border: 1px dotted red;
+               margin-right: 80%;
+
+           }
+
+           
+       </style>
+
+</head>
+
+<body>
+    <p>choose only one course all of them</p>
+
+    <select>
+        <option value="">Select any course</option>
+        <option value="Hotel Management">Hotel Management</option>
+        <option value="B.Pharma.">B.Pharma.</option>
+        <option value="B.Tech.">B.Tech.</option>
+        <option value="BCA and MCA">BCA and MCA</option>
+    </select>
+
+    <p>So you want to have <span>
+            <p id="course"></p>
+        </span> </p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').on('change', function () {
+                $("#course").append(this.value + " <br>")
+            });
+        });
+
+    </script>
+</body>
+
+</html>
